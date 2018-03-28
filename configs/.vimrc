@@ -21,6 +21,15 @@ map <S-l> :bn<cr>
 map <S-h> :bp<cr>
 map <leader>bd :bd<cr>
 
+" Smart way to move between windows with crtl + hjkl
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+"Buffer menu
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+
 map <leader>fs :!fsharpi %<CR>
 
 "disable continues syntax check
@@ -39,8 +48,19 @@ set showmatch                   "highlight matching [{()}]
 set incsearch                   "search as characters are entered
 set hlsearch                    "highlight matches
 set ignorecase                  "ignore case when searching
-"turn off search highlight
+
+"Searchh
 map <silent> <leader><cr> :noh<cr>
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <tab> %
+vnoremap <tab> %
 
 " move to beginning/end of line
 nnoremap B ^
@@ -60,15 +80,6 @@ set writebackup
 set backupskip=/tmp/*,/private/tmp/*
 set backupdir=~/.vim/_backup//  " where to put backup files.
 set directory=~/.vim/_temp//    " where to put swap files.
-
-" Smart way to move between windows with crtl + hjkl
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-"Buffer menu
-:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 "Nerdtree
 map <leader>n :NERDTreeToggle<CR>
