@@ -56,10 +56,10 @@ end
 
 "Write backups to tmp
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
+set backupskip=/tmp/*,/private/tmp/*
+set backupdir=~/.vim/_backup//  " where to put backup files.
+set directory=~/.vim/_temp//    " where to put swap files.
 
 " Smart way to move between windows with crtl + hjkl
 map <C-j> <C-W>j
@@ -72,7 +72,11 @@ map <C-l> <C-W>l
 
 "Nerdtree
 map <leader>n :NERDTreeToggle<CR>
+map <Leader>v :NERDTreeFind<CR>
 let g:airline#extensions#tabline#enabled = 1
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
