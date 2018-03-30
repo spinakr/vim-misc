@@ -91,12 +91,19 @@ let g:syntastic_cs_checkers = ['code_checker']
 "Omni rename
 nnoremap <Leader>rn :OmniSharpRename<CR>
 nnoremap <Leader>kd :OmniSharpCodeFormat<CR>
-nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
+nnoremap <Leader>b :wa!<cr>:OmniSharpBuild<cr>
 
 nnoremap gd :OmniSharpGotoDefinition<cr>
 nnoremap fi :OmniSharpFindImplementations<cr>
 nnoremap fu :OmniSharpFindUsages<cr>
 nnoremap <leader>tt :OmniSharpTypeLookup<cr>
 
-
-
+"Syntastic
+let g:syntastic_cs_checkers = ['code_checker']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
