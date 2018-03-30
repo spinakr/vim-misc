@@ -1,7 +1,9 @@
 execute pathogen#infect()
+execute pathogen#helptags()
 
 "Colors
 filetype plugin indent on
+filetype plugin on
 set background=dark
 colorscheme solarized
 syntax enable 
@@ -31,10 +33,6 @@ map <C-l> <C-W>l
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 
 map <leader>fs :!fsharpi %<CR>
-
-"disable continues syntax check
-let g:syntastic_fsharp_checkers = ['']
-"let g:fsharp_only_check_errors_on_write = 1
 
 :set tabstop=4
 :set shiftwidth=4
@@ -89,12 +87,34 @@ let g:airline#extensions#tabline#enabled = 1
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
+"Airline
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"Omnisharp
+let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_server_path = '/Users/andkof/Bin/omnisharp.http-osx/omnisharp/OmniSharp.exe'
+let g:OmniSharp_host = "http://localhost:2000"
+let g:OmniSharp_timeout = 1
+let g:syntastic_cs_checkers = ['code_checker']
+
+"Omni rename
+nnoremap <Leader>nm :OmniSharpRename<CR>
+nnoremap <F2> :OmniSharpRename<CR>
+command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
+
+nnoremap <Leader>rl :OmniSharpReloadSolution<CR>
+nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
+nnoremap <Leader>ss :OmniSharpStartServer<CR>
+nnoremap <Leader>sp :OmniSharpStopServer<CR>
+
+nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
+
+nnoremap gd :OmniSharpGotoDefinition<cr>
+nnoremap fi :OmniSharpFindImplementations<cr>
+nnoremap fu :OmniSharpFindUsages<cr>
+nnoremap <leader>tt :OmniSharpTypeLookup<cr>
+
+
 
