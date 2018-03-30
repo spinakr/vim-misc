@@ -2,7 +2,7 @@
 > Contains commands and key combinations realted to the configurations and plugins in this repo.
 
 ### IDE commands (mostly omnisharp)
- - :%/<word>/<new word>/ : Replace all occurenses of word with new word
+ - :%/\<word\>/\<new word\>/ : Replace all occurenses of word with new word
  - ,rn : Rename selection
  - ,kd : Format code
  - F5 : Build 
