@@ -113,9 +113,11 @@ let g:syntastic_check_on_wq = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/packages/**
 set wildignore+=*/node_modules/**
-
 nnoremap <Leader>t :CtrlP<CR>
 
+"Javascript
+let g:jsx_ext_required = 0
+let g:javascript_plugin_flow = 1
 
 
 
