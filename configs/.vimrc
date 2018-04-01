@@ -90,7 +90,7 @@ let g:syntastic_check_on_wq = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/packages/**
 set wildignore+=*/node_modules/**
-nnoremap <Leader>p :CtrlP<CR>
+nnoremap <Leader>t :CtrlP<CR>
 
 "Javascript
 let g:javascript_plugin_flow = 1
@@ -108,4 +108,9 @@ let g:user_emmet_settings = {
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
+"Prettier
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+
+
 

@@ -28,3 +28,6 @@
 [submodule "bundle/ale-vim"]
 	path = bundle/ale-vim
 	url = https://github.com/w0rp/ale.git
+[submodule "bundle/vim-prettier"]
+	path = bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
