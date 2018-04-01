@@ -3,6 +3,7 @@
 
 ### IDE commands 
  - :%/\<word\>/\<new word\>/ : Replace all occurenses of word with new word
+ - 
 
 ### Movement
 - E / B : Goto end / beginning of line 

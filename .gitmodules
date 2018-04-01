@@ -25,3 +25,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/ale-vim"]
+	path = bundle/ale-vim
+	url = https://github.com/w0rp/ale.git
