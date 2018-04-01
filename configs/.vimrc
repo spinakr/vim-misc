@@ -27,8 +27,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-:set tabstop=4
-:set shiftwidth=4
+:set tabstop=2
+:set shiftwidth=2
 :set expandtab
 
 set number                      "show line numbers
@@ -56,11 +56,6 @@ nnoremap E $
 " save session, reopens with vim -S
 nnoremap <leader>s :mksession<CR>
 
-" Make ESC work in CommandT while in terminal Vim
-if &term =~ "xterm" || &term =~ "screen"
-    let g:CommandTCancelMap=['<ESC>']
-end
-
 "Write backups to tmp
 set backup
 set writebackup
@@ -81,25 +76,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-"Omnisharp
-let g:OmniSharp_server_type = 'roslyn'
-let g:OmniSharp_server_path = '/Users/andkof/Bin/omnisharp.http-osx/omnisharp/OmniSharp.exe'
-let g:OmniSharp_host = "http://localhost:2000"
-let g:OmniSharp_timeout = 1
-let g:syntastic_cs_checkers = ['code_checker']
-
-"Omni rename
-nnoremap <Leader>rn :OmniSharpRename<CR>
-nnoremap <Leader>kd :OmniSharpCodeFormat<CR>
-nnoremap <Leader>b :wa!<cr>:OmniSharpBuild<cr>
-
-nnoremap gd :OmniSharpGotoDefinition<cr>
-nnoremap fi :OmniSharpFindImplementations<cr>
-nnoremap fu :OmniSharpFindUsages<cr>
-nnoremap <leader>tt :OmniSharpTypeLookup<cr>
-
 "Syntastic
-let g:syntastic_cs_checkers = ['code_checker']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -113,10 +90,17 @@ let g:syntastic_check_on_wq = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/packages/**
 set wildignore+=*/node_modules/**
-nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>p :CtrlP<CR>
 
 "Javascript
-let g:jsx_ext_required = 0
 let g:javascript_plugin_flow = 1
+
+"Emmet (html sxpansion)
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
 
 
