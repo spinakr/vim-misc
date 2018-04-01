@@ -2,8 +2,12 @@
 > Contains commands and key combinations realted to the configurations and plugins in this repo.
 
 ### IDE commands 
- - :%/\<word\>/\<new word\>/ : Replace all occurenses of word with new word
- - 
+- `,t` : Open ctrplP file finder
+- `,p` : Format current file 
+- `<Tab>,` : Expand html tags using emmet
+- `,n` : Open/close nerdTREE split
+- `,v` : Reveal file in nerdTREE
+- :%/\<word\>/\<new word\>/ : Replace all occurenses of word with new word
 
 ### Movement
 - E / B : Goto end / beginning of line 
@@ -12,9 +16,6 @@
 - Shift + h/l : Switch back and forth between buffers
 - ,bd : Close buffer
 - Ctrl + h/j/k/l : Switch between splits
- - F5 : Buffer menu
-- ,n : Open/close nerdTREE split
-- ,v : Reveal file in nerdTREE
 
 ### Search
 * : Highlight occurenses of word under cursor
