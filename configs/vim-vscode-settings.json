@@ -1,30 +1,47 @@
 {
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-        {
-            "before": [
-                "k",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
-    "vim.handleKeys": {
-        "<C-w>": false,
-        "<C-r>": true
+  "vim.easymotion": false,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
-    "vim.sneak": true,
-    "vim.leader": ","
+    {
+      "before": [
+        "k",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.leader": ",",
+  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-r>": true
+  },
+  "window.zoomLevel": 1,
+  "editor.lineNumbers": "on",
+  "explorer.confirmDragAndDrop": false,
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "html.suggest.html5": true,
+  "html.autoClosingTags": true,
+  "files.exclude": {
+    "node_modules/": true,
+    "**/bin/": true,
+    "**/obj/": true,
+    "**/.vscode/": true
+  }
 }
