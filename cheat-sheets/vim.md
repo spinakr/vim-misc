@@ -7,6 +7,7 @@
 - `<Tab>,` : Expand html tags using emmet
 - `,n` : Open/close nerdTREE split
 - `,v` : Reveal file in nerdTREE
+- `gc` : Toggle comment in visual selection
 - :%/\<word\>/\<new word\>/ : Replace all occurenses of word with new word
 
 ### Movement
@@ -19,6 +20,7 @@
 
 ### Search
 * : Highlight occurenses of word under cursor
+/ : Forward search 
 N/P : Goto next / previous search hit
 
 ### Misc
