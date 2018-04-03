@@ -1,9 +1,9 @@
-cd ~/vimfiles
+cd ~/.vim
 git submodule init
 git submodule update
 git submodule foreach git submodule init
 git submodule foreach git submodule update
-mkdir -p ~/vimfiles/_backup
-mkdir -p ~/vimfiles/_temp
-New-Item -ItemType SymbolicLink -Path ~ -Name .vimrc -Value ~/vimfiles/configs/.vimrc
-cd ~/vimfiles/bundle/vim-prettier; yarn; cd ../../
+mkdir -p ~/.vim/_backup
+mkdir -p ~/.vim/_temp
+New-Item -ItemType SymbolicLink -Path ~ -Name .vimrc -Value ~/.vim/configs/.vimrc
+cd ~/.vim/bundle/vim-prettier; yarn; cd ../../
