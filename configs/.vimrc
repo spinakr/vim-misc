@@ -109,7 +109,8 @@ nnoremap <Leader>t :CtrlP<CR>
 let g:javascript_plugin_flow = 1
 
 "Emmet (html sxpansion)
-let g:user_emmet_leader_key='<Tab>'
+"let g:user_emmet_leader_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
 \      'extends': 'jsx',
