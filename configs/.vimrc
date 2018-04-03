@@ -87,7 +87,13 @@ let g:syntastic_check_on_wq = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*/packages/**
 set wildignore+=*/node_modules/**
+set wildignore+=*/octopacked/**
+set wildignore+=*/artifacts/**
+set wildignore+=*/logs/**
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['package.json']
 nnoremap <Leader>t :CtrlP<CR>
+
 
 "Javascript
 let g:javascript_plugin_flow = 1
