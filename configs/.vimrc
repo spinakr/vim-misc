@@ -6,6 +6,7 @@ let $LANG = 'en_US'
 if has('gui_running')
   set guifont=Consolas:h12
 endif
+scriptencoding utf-8
 
 
 "Colors
