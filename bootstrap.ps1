@@ -9,3 +9,4 @@ New-Item -ItemType SymbolicLink -Path ~ -Name .vimrc -Value ~/.vim/configs/.vimr
 cd ~/.vim/bundle/vim-prettier; yarn; cd ../../
 mkdir ~/vimfiles
 New-Item -ItemType SymbolicLink -Path ~/vimfiles -Name bundle -Value ~/.vim/bundle/
+New-Item -ItemType SymbolicLink -Path ~/vimfiles -Name autoload -Value ~/.vim/autoload/

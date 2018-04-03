@@ -3,6 +3,9 @@ execute pathogen#helptags()
 
 set langmenu=en_US
 let $LANG = 'en_US'
+if has('gui_running')
+  set guifont=Consolas:h12
+endif
 
 
 "Colors
