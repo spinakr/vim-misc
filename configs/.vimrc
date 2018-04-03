@@ -7,6 +7,8 @@ filetype plugin on
 set background=dark
 colorscheme solarized
 syntax enable 
+set backspace=2
+set backspace=indent,eol,start
 
 "Navigation mappings
 :imap jk <Esc>
