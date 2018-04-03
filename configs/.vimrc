@@ -68,9 +68,6 @@ map <leader>n :NERDTreeToggle<CR>
 map <Leader>v :NERDTreeFind<CR>
 let g:airline#extensions#tabline#enabled = 1
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
-
 "Airline
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
