@@ -1,6 +1,10 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
+set langmenu=en_US
+let $LANG = 'en_US'
+
+
 "Colors
 filetype plugin indent on
 filetype plugin on
