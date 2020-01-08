@@ -105,6 +105,9 @@ let g:ctrlp_root_markers = ['package.json']
 nnoremap <Leader>t :CtrlP<CR>
 
 
+"Javascript
+let g:javascript_plugin_flow = 1
+
 "Emmet (html sxpansion)
 "let g:user_emmet_leader_key='<Tab>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
@@ -114,4 +117,9 @@ let g:user_emmet_settings = {
 \      'quote_char': "'",
 \  },
 \}
+
+"Ale linter
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
